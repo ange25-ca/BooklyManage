@@ -1,2 +1,2 @@
 # BooklyManage
-Aplicación web encargada de la gestoín de libros
+Aplicación web encargada de la gestíon de libros

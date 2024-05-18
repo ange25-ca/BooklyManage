@@ -4,10 +4,12 @@
   "description": "Aplicación web encargada de la gestoín de libros",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass styles/sass:public/css",
+    "sass-watch": "sass --watch styles/sass:public/css",
+    "start": "npm run sass && nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Angelica Monserrath Cahum Zuñiga",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
