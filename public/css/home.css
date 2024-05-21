@@ -7,6 +7,7 @@
   text-decoration: none;
   list-style: none;
   background-color: black;
+  color: white;
 }
 
 body {
@@ -85,7 +86,7 @@ img {
   font-size: 55px;
   line-height: 1;
   color: white;
-  margin-bottom: 25rem;
+  margin-bottom: 25px;
 }
 
 .btn-1 {
@@ -130,32 +131,28 @@ h3 {
   text-transform: capitalize;
 }
 
-.header {
-  min-width: 0vh;
-  padding: 10px 30px;
-}
-
-.header-content {
-  flex-direction: column;
-  text-align: center;
-}
-
-.header-txt {
-  margin-bottom: 20px;
-}
-
-.header-img img {
-  width: 300px;
-}
-
 @media (max-width: 991px) {
-  .menu-container {
+  .header {
+    min-width: 0vh;
+    padding: 10px 30px;
+  }
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-txt {
+    margin-bottom: 20px;
+  }
+  .header-img img {
+    width: 300px;
+  }
+  .menu-conatiner {
     padding: 30px;
   }
-  .menu-container label {
+  .menu- label {
     display: initial;
   }
-  .menu-container .navbar {
+  .menu-conatiner .navbar {
     position: absolute;
     top: 100%;
     left: 0;
