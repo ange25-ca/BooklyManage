@@ -1,0 +1,42 @@
+
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/css/home.css")
+    title BooklyManage
+  body
+    header.header 
+      div.menu-container.container
+        a(href="#" class="logo") logo
+        input(type="checkbox", id="menu-container")
+        label(for="menu")
+          img(src="img/menu-line.png", alt="", srcset="")
+        nav.navbar
+          ul 
+            li 
+              a(href="#") Inicio 
+            li 
+              a(href="#") Servicios 
+            li  
+              a(href="#") Productos
+            li 
+              a(href="#") Contactos  
+      div.header-content.container 
+        div.header-txt
+          h1 DISFRUTA DE UN LIBRO!
+          a(href="#" class="btn-1") Información 
+        div.header-img 
+          img(src="img/home.jpg", alt="Books", srcset="")
+    section.information.container
+      div.information-content
+        div.information-1
+          img(src="img/PRIDE_AND_PREJUDICE.jpg", alt="prueba1", srcset="")
+          h3 Libro1
+        div.information-1
+          img(src="img/JANE_EYRE.jpg", alt="prueba1", srcset="")
+          h3 Libro2
+        div.information-1
+          img(src="img/MUJERCITAS_LOUISA_MAY.jpg", alt="prueba1", srcset="")
+          h3 Libro3   

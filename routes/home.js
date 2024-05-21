@@ -4,7 +4,7 @@ const router = express.Router();
 // Ruta para mostrar el formulario de registro
 router.get('/', (req, res) => {
   // Renderiza la vista index sin el texto cifrado
-  res.render('index');
+  res.render('home');
 });
 
 module.exports = router;

@@ -2,7 +2,7 @@
   "name": "booklymanage",
   "version": "1.0.0",
   "description": "Aplicación web encargada de la gestoín de libros",
-  "main": "index.js",
+  "main": "home.js",
   "scripts": {
     "sass": "sass styles/sass:public/css",
     "sass-watch": "sass --watch styles/sass:public/css",

@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap')
+   
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    list-style: none
+    background-color: black
+
+body
+    font-family: "Nobile", sans-serif
+
+img
+    max-width: 100% 
+
+.container 
+    max-width: 1200px
+    margin: 0 auto
+
+.header
+    background-color: black
+    display: flex
+    align-items: center
+    min-height: 70vh
+    padding: 100px 0
+
+.menu-container
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.logo
+    color: #ffffff93
+    font-size: 25px
+    font-weight: 800
+    text-transform: uppercase
+
+.menu-container .navbar ul li
+    position: relative
+    float: left
+
+.menu-container .navbar ul li a
+    font-size: 18px
+    padding: 20px
+    color:#ffffff
+    display: block 
+    font-weight: 400
+
+#menu-container
+    display: none
+
+.menu-container-icono
+    width: 25px
+
+.menu-container label
+    cursor: pointer
+    display: none
+
+.header-content
+    display: flex
+
+.header-txt
+    flex-basis: 50%
+
+.header-txt h1
+    font-size: 55px
+    line-height: 1
+    color: #FFFF
+    margin-bottom: 25rem
+
+.btn-1
+    display: inline-block
+    padding: 13px 25px
+    color: white
+    border-radius: 25px
+    background-color: #6b6b6b
+    text-transform: capitalize
+
+.header-img
+    flex-basis: 50%
+    text-align: center
+
+.header-img img
+    width: 400px
+
+.information
+    width: 70%
+    box-shadow: 0 0 20px black
+    padding: 25px 75px
+    margin-top: -75px
+
+.information-content
+    text-align: center
+    display: flex
+    justify-content: space-between
+    background-color: #BABABA
+
+.information-1 img
+    width: 35px
+
+h3 
+    font-size: 17px
+    color: black
+    text-transform: capitalize
+
+.header 
+    min-width: 0vh
+    padding: 10px 30px
+
+.header-content
+    flex-direction: column
+    text-align: center
+
+.header-txt 
+    margin-bottom: 20px
+
+.header-img img
+    width: 300px
+
+@media (max-width:991px) 
+    .menu-container
+        padding: 30px
+    .menu-container label
+        display: initial
+    .menu-container .navbar
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        background-color: #FFFF
+        display: none
+
+    .menu-container.navbar
+        width: 100%
+
+    .menu-container .navbar ul li a
+        color: #52514c
+    
+    .logo
+        display: none
+
+    #menu:checked ~ .navbar
+        display: initial
