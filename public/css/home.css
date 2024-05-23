@@ -1,37 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  background-color: black;
-  color: white;
 }
 
 body {
-  font-family: "Nobile", sans-serif;
+  font-family: "Baloo Bhaijaan 2";
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 img {
   max-width: 100%;
 }
 
+#img2 {
+  width: 10rem;
+  height: 5rem;
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .header {
-  background-color: black;
   display: flex;
   align-items: center;
   min-height: 70vh;
   padding: 100px 0;
 }
 
-.menu-container {
+.menu {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,37 +45,40 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid rgba(18, 18, 18, 0.6745098039);
 }
 
 .logo {
-  color: rgba(255, 255, 255, 0.5764705882);
-  font-size: 25px;
+  color: rgba(0, 0, 0, 0.5764705882);
+  font-size: 1.5rem;
+  margin-left: 5rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.menu-container .navbar ul li {
+.menu .navbar ul li {
   position: relative;
   float: left;
 }
 
-.menu-container .navbar ul li a {
+.menu .navbar ul li a {
   font-size: 18px;
   padding: 20px;
-  color: #ffffff;
   display: block;
-  font-weight: 400;
+  font-weight: 900;
+  margin-right: 2rem;
+  font-display: "Baloo Bhaijaan 2";
 }
 
-#menu-container {
+#menu {
   display: none;
 }
 
-.menu-container-icono {
+.menu-icono {
   width: 25px;
 }
 
-.menu-container label {
+.menu label {
   cursor: pointer;
   display: none;
 }
@@ -83,10 +92,10 @@ img {
 }
 
 .header-txt h1 {
-  font-size: 55px;
+  font-size: 3rem;
   line-height: 1;
-  color: white;
-  margin-bottom: 25px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .btn-1 {
@@ -101,10 +110,13 @@ img {
 .header-img {
   flex-basis: 50%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .header-img img {
   width: 400px;
+  margin-bottom: 2rem;
 }
 
 .information {
@@ -118,11 +130,11 @@ img {
   text-align: center;
   display: flex;
   justify-content: space-between;
-  background-color: #BABABA;
 }
 
 .information-1 img {
   width: 35px;
+  height: 15rem;
 }
 
 h3 {
@@ -131,10 +143,56 @@ h3 {
   text-transform: capitalize;
 }
 
+.footer {
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link a {
+  font-size: 15px;
+  display: 17px;
+  margin-bottom: 10px;
+}
+
+.link a:hover {
+  color: blue;
+}
+
 @media (max-width: 991px) {
+  .menu {
+    padding: 30px;
+  }
+  .menu label {
+    display: initial;
+  }
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(8, 8, 8, 0.5568627451);
+    margin: 0 10px;
+    display: none;
+  }
+  .menu .navbar ul li {
+    width: 100%;
+  }
+  .menu .navbar ul li a {
+    color: white;
+  }
+  .logo {
+    display: none;
+  }
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
   .header {
     min-width: 0vh;
-    padding: 10px 30px;
+    padding: 100px 30px;
   }
   .header-content {
     flex-direction: column;
@@ -146,31 +204,21 @@ h3 {
   .header-img img {
     width: 300px;
   }
-  .menu-conatiner {
+  .information {
+    display: none;
+  }
+  .menu-container {
     padding: 30px;
   }
-  .menu- label {
+  .menu label {
     display: initial;
   }
-  .menu-conatiner .navbar {
+  .menu .navbar {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background-color: white;
     display: none;
-  }
-  .menu-container.navbar {
-    width: 100%;
-  }
-  .menu-container .navbar ul li a {
-    color: #52514c;
-  }
-  .logo {
-    display: none;
-  }
-  #menu:checked ~ .navbar {
-    display: initial;
   }
 }
 
