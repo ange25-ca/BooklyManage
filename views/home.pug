@@ -5,6 +5,7 @@ html(lang="es")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="/css/home.css")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
     link(href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css", rel="stylesheet")
     title BooklyManage
   body
@@ -28,21 +29,35 @@ html(lang="es")
       div.header-content.container 
         div.header-txt
           h1 DISFRUTA DE UN LIBRO!
+          p En nuestra página web, te ofrecemos la llave a un universo de historias fascinantes que aguardan ser exploradas. Desde clásicos atemporales hasta las últimas tendencias literarias, hay algo para cada alma curiosa.
+            | Deja que cada página sea un portal hacia aventuras inimaginables y que cada palabra te envuelva en un abrazo de conocimiento y entretenimiento.
+            | ¿Estás listo para comenzar esta emocionante travesía?
           a(href="#" class="btn-1") Información 
         div.header-img 
           img(src="img/fondo.avif", id="img1",alt="Books", srcset="")
           img(src="img/home3.jpg", id="img2",alt="Books", srcset="")
-    section.information.container
-      div.information-content
-        div.information-1
+    section.swiper.mySwiper.container
+      div.swiper-wrapper
+        div.swiper-slide
+          div.swiper-txt
+            h3 Libro1
+            p HOLI BOLI
           img(src="img/PRIDE_AND_PREJUDICE.jpg", alt="prueba1", srcset="")
-          h3 Libro1
-        div.information-1
-          img(src="img/JANE_EYRE.jpg", alt="prueba1", srcset="")
-          h3 Libro2
-        div.information-1
-          img(src="img/MUJERCITAS_LOUISA_MAY.jpg", alt="prueba1", srcset="")
-          h3 Libro3   
+        div.swiper-slide
+          div.swiper-txt
+            h3 Libro1
+            p HOLI BOLI
+          img(src="img/PRIDE_AND_PREJUDICE.jpg", alt="prueba1", srcset="")
+        div.swiper-slide
+          div.swiper-txt
+            h3 Libro1
+            p HOLI BOLI
+          img(src="img/MUJERCITAS_LOUISA.jpg", alt="2", srcset="")
+        div.swiper-slide
+          div.swiper-txt
+            h3 Libro1
+            p HOLI BOLI
+          img(src="img/PRIDE_AND_PREJUDICE.jpg", alt="3", srcset="")
     footer.footer
       div.footer-content.container
         div.link
@@ -56,4 +71,6 @@ html(lang="es")
               a(href="#") Lorem 
             li 
               a(href="#") Lorem 
-               
+
+  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+  script(src="home.pug")

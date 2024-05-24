@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap')
 
+
 *
     margin: 0
     padding: 0
     box-sizing: border-box
     text-decoration: none
     list-style: none
+    color: black
 
 body
     font-family: "Baloo Bhaijaan 2"
@@ -41,8 +43,7 @@ img
     display: flex
     align-items: center
     justify-content: space-between
-    border-bottom: 2px solid #121212ac
-
+    border-bottom: 2px solid rgb(18 18 18 / 15%)
 
 .logo
     color: #00000093
@@ -61,8 +62,7 @@ img
     display: block 
     font-weight: 900
     margin-right: 2rem
-    font-display: "Baloo Bhaijaan 2"
-
+    
 #menu
     display: none
 
@@ -78,12 +78,14 @@ img
 
 .header-txt
     flex-basis: 50%
+    padding: 0 5rem
+    text-align: justify
 
 .header-txt h1
     font-size: 3rem
     line-height: 1
     margin-bottom: 2rem
-    margin-top: 4rem
+    text-align: left
 
 .btn-1
     display: inline-block
@@ -92,6 +94,7 @@ img
     border-radius: 25px
     background-color: #6b6b6b
     text-transform: capitalize
+    margin-top: 1rem
 
 .header-img
     flex-basis: 50%
@@ -103,20 +106,22 @@ img
     width: 400px
     margin-bottom: 2rem
 
-.information
-    width: 70%
-    box-shadow: 0 0 20px black
-    padding: 25px 75px
-    margin-top: -75px
+.swiper
+    margin-top: 40px
 
-.information-content
-    text-align: center
-    display: flex
-    justify-content: space-between
+.swiper-slide
+    margin-bottom: 50px
+    background-color: #FFFF
+    box-shadow: 0 30px 30px #1c1b1b4d
+    border-radius: 15px
+    height: 420px
+    width: 50px
+    position: relative
 
-.information-1 img
-    width: 35px
-    height: 15rem
+.swiper-slide img
+    width: 295px
+    border-radius: 15px
+    height: 420px
 
 h3 
     font-size: 17px
@@ -137,7 +142,7 @@ h3
     margin-bottom: 10px
 
 .link a:hover
-    color: blue
+    color: #050505
     
 @media (max-width:991px) 
     .menu 
@@ -179,7 +184,8 @@ h3
         margin-bottom: 20px
 
     .header-img img
-        width: 300px
+        display: none
+        //width: 300px
 
     .information
         display: none
