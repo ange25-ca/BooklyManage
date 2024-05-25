@@ -3,11 +3,15 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    link(href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css", rel="stylesheet")
+    link(rel="stylesheet", href="/css/search.css")
+    title BooklyMange
   body 
     block content
-      .general-container
-        form(action='', method='GET' class='search-bar')
-          input(type='text', name='q', placeholder='Buscar producto...')
-          button(type='submit')
-            i(class='material-symbols-rounded') search
+      div.general-container
+        div.information-search
+          h1 Bienvenidos al mundo BookliManage
+        form(action='/buscar-producto', method='GET' class='search-bar')
+          input(type='text', name='q',class='inputSearch' placeholder='Buscar producto...')
+          button(type='submit', class='buttonSearch')
+            i(class="ri-search-eye-line")

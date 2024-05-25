@@ -4,24 +4,22 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" href="/css/login.css")
-    title Login
+    link(rel="stylesheet" href="/css/register.css")
+    title Registro
   body
-    .login-container
-      .login-info-container
+    .register-container
+      .register-info-container
         h1.title Registrate
         form.inputs-container(action='/registrar-usuario' method='POST')
-            label(for="username") Usuario
-              input#login-name(type="text", name="nombre", required)
-              label(for="email") E-mail
-              input#signup-email(type="email", name="email", required)
-            .input-inicioSesion
-              label(for="password") Password
-              input#signup-password(type="password", name="password", required)
-            .input-inicioSesion
-              label(for="confirmPassword") Confirm password
-              input#signup-password-confirm(type="password", name="confirmPassword", required)
-            button.btn-signup(type="submit") Registrarse
-                p ¿Ya tienes una cuenta? 
-            a(href='/login' class='register-link') Inicia sesión
+            label.labeltext(for="username") Nombre
+              input.input(type="text", name="nombre", required)
+            label.labeltext(for="email") E-mail
+              input.input(type="email", name="email", required)
+            label.labeltext(for="password") Password
+              input.input(type="password", name="password", required)
+            label.labeltext(for="confirmPassword") Confirm password
+              input.input(type="password", name="confirmPassword", required)
+            button.btn Registrate
+            p ¿Ya tienes una cuenta? 
+              a(href='/login', class='span') Inicia sesión
       img.image-container(src="images/login.svg" alt="")

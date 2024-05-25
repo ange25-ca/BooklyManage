@@ -9,15 +9,13 @@ html(lang="en")
   body
     .login-container
       .login-info-container
-        h1.title Log in with
+        h1.title Inicia sesión
         form.inputs-container(action='login' method='post')
           input.input(type="text" placeholder="Username")
           input.input(type="text" placeholder="Password")
-          p Forgot password? 
-            span.span Click here
           button.btn login
-          p Don't have an account? 
-            span.span Sign Up
+          p No tienes una cuenta? 
+              a(href='/register', class='span') Registrate
       img.image-container(src="images/login.svg" alt="")
 
 
