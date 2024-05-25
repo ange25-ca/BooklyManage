@@ -9,7 +9,7 @@ html(lang="en")
   body
     .login-container
       .login-info-container
-        h1.title Log in with
+        h1.title Registrate
         form.inputs-container(action='/registrar-usuario' method='POST')
             label(for="username") Usuario
               input#login-name(type="text", name="nombre", required)
@@ -24,3 +24,4 @@ html(lang="en")
             button.btn-signup(type="submit") Registrarse
                 p ¿Ya tienes una cuenta? 
             a(href='/login' class='register-link') Inicia sesión
+      img.image-container(src="images/login.svg" alt="")
