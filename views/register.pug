@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/css/login.css")
+    title Login
+  body
+    .login-container
+      .login-info-container
+        h1.title Log in with
+        form.inputs-container(action='/registrar-usuario' method='POST')
+            label(for="username") Usuario
+              input#login-name(type="text", name="nombre", required)
+              label(for="email") E-mail
+              input#signup-email(type="email", name="email", required)
+            .input-inicioSesion
+              label(for="password") Password
+              input#signup-password(type="password", name="password", required)
+            .input-inicioSesion
+              label(for="confirmPassword") Confirm password
+              input#signup-password-confirm(type="password", name="confirmPassword", required)
+            button.btn-signup(type="submit") Registrarse
+                p ¿Ya tienes una cuenta? 
+            a(href='/login' class='register-link') Inicia sesión

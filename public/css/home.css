@@ -12,9 +12,7 @@
 
 body {
   font-family: "Baloo Bhaijaan 2";
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background-position: center;
 }
 
 img {
@@ -85,6 +83,8 @@ img {
 
 .header-content {
   display: flex;
+  align-items: center;
+  margin: 0 5rem;
 }
 
 .header-txt {
@@ -129,12 +129,69 @@ h3 {
 }
 
 .footer {
-  padding: 50px 0;
+  width: 100%;
+  position: relative;
+  background-color: rgba(2, 2, 2, 0.5450980392);
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction-grid-row: 2;
 }
 
-.footer-content {
+.social-iconf {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 5px;
+  flex-wrap: wrap;
+}
+
+.iconf-elem {
+  list-style: none;
+}
+
+.iconf {
+  color: #fff;
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.iconf:hover {
+  transform: translateY(-10px);
+}
+
+.menuf {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.menuf-elem {
+  list-style: none;
+}
+
+.menuf-iconf {
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menuf-iconf:hover {
+  opacity: 1;
 }
 
 .link a {
@@ -184,7 +241,7 @@ h3 {
     text-align: center;
   }
   .header-txt {
-    margin-bottom: 20px;
+    padding: 0;
   }
   .header-img img {
     display: none;
@@ -201,6 +258,9 @@ h3 {
     left: 0;
     right: 0;
     display: none;
+  }
+  .footer {
+    width: 100%;
   }
 }
 
