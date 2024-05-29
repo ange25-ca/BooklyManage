@@ -11,15 +11,19 @@ html(lang="en")
       .register-info-container
         h1.title Registrate
         form.inputs-container(action='/registrar-usuario' method='POST')
-            label.labeltext(for="username") Nombre
-              input.input(type="text", name="nombre", required)
+            label.labeltext(for="nombre") Nombre
+              input.input(type="text", name="nombre", id= "nombre", required)
+
             label.labeltext(for="email") E-mail
-              input.input(type="email", name="email", required)
+              input.input(type="email", name="email", id="email", required)
+
             label.labeltext(for="password") Password
-              input.input(type="password", name="password", required)
+              input.input(type="password", name="password", id="password", required)
+
             label.labeltext(for="confirmPassword") Confirm password
-              input.input(type="password", name="confirmPassword", required)
-            button.btn Registrate
+              input.input(type="password", name="confirmPassword", id="confirmPassword", required)
+            
+            button.btn(type="submit") Registrate
             p ¿Ya tienes una cuenta? 
               a(href='/login', class='span') Inicia sesión
       img.image-container(src="images/login.svg" alt="")

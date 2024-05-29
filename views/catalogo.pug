@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .general-container
+    if Libro.length > 0
+      .producto-container
+        each Libro in libro
+          .producto
+            img(src=`${Libro.imagen}`, alt=Libro.titulo)
+            p(class='producto-label') #{Libro.titulo.toUpperCase()} 
+            form(action=`/agregar-favorite/${Libro.id}`, method='POST')
+              button(type='submit') Agregar al favoritos
+                  i.fas.fa-search
+    else
+      p No se encontraron resultados.

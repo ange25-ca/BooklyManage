@@ -8,10 +8,25 @@ html(lang="en")
     title BooklyMange
   body 
     block content
+      header.header 
+        div.menu.container
+          a(href="#" class="logo") 
+            i(class="ri-book-read-line") BooklyManage
+          input(type="checkbox", id="menu")
+          label(for="menu")
+            i.menu-icon(class="ri-menu-line")
+          nav.navbar
+            ul 
+              li 
+                a(href="#") Inicio
+              li  
+                a(href="#") Favoritos
+              li 
+                a(href="#") Contactos
       div.general-container
         div.information-search
           h1 Bienvenidos al mundo BookliManage
-        form(action='/buscar-producto', method='GET' class='search-bar')
-          input(type='text', name='q',class='inputSearch' placeholder='Buscar producto...')
+        form(action='/buscar-libro', method='GET' class='search-bar')
+          input(type='text', name='q',class='inputSearch' placeholder='Buscar libro...')
           button(type='submit', class='buttonSearch')
             i(class="ri-search-eye-line")

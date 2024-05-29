@@ -4,7 +4,7 @@ const router = express.Router();
 
 // Ruta para mostrar el formulario de registro
 router.get('/', (req, res) => {
-    res.render('register');
+    res.render('registrar');
 });
 
 module.exports = router;

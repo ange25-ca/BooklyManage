@@ -21,10 +21,64 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  padding: 100px 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(18, 18, 18, 0.15);
+}
+
+.logo {
+  color: rgba(0, 0, 0, 0.5764705882);
+  font-size: 1.5rem;
+  margin-left: 5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+  text-decoration: none;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  display: block;
+  font-weight: 900;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
 .general-container {
   margin: 3rem 3rem;
   height: 80px;
-  margin-top: 10rem;
+  margin-top: -15rem;
   text-align: center;
 }
 
@@ -59,6 +113,40 @@ body {
 }
 .search-bar .buttonSearch:hover {
   background-attachment: rgba(88, 82, 82, 0.3294117647);
+}
+
+@media (max-width: 991px) {
+  .menu {
+    padding: 30px;
+  }
+  .menu label {
+    display: initial;
+  }
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(8, 8, 8, 0.5568627451);
+    margin: 0 10px;
+    display: none;
+  }
+  .menu .navbar ul li {
+    width: 100%;
+  }
+  .menu .navbar ul li a {
+    color: white;
+  }
+  .logo {
+    display: none;
+  }
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+  .header {
+    min-width: 0vh;
+    padding: 100px 30px;
+  }
 }
 
 /*# sourceMappingURL=search.css.map */
