@@ -22,7 +22,8 @@ async function obtenerTodos() {
     const response = await axios.get(`${process.env.BASE_URL}/libro`);
     const libro = response.data;
     return libro.map(libro => new Libro(libro.id,
-      libro.titulo, libro.descripcion, libro.imagen));
+      libro.titulo, libro.autor, libro.ISBN, libro.genero,
+      libro.fecha_publi, libro.descripcion, libro.imagen));
   } catch (error) {
     console.error('Error al obtener todos los productos:', error);
     throw error;

@@ -1,6 +1,6 @@
 // authMiddleware.js
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');  
 const crypto = require('crypto');
 
 async function authenticate(req, res, next) {

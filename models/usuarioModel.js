@@ -1,6 +1,5 @@
 const axios = require('axios');
 
-
 class Usuario {
     constructor(id, nombre, email, password_hash) {
         this.id = id;
@@ -12,8 +11,7 @@ class Usuario {
 
 async function registrarUsuario(dataSegura) {
     try {
-        await axios.post(`${process.env.BASE_URL}/usuarios/registrar`, { dataSegura});
-        return response.data;
+        await axios.post(`${process.env.BASE_URL}/usuarios/registrar`, { dataSegura });
     } catch (error) {
         console.error('Error al registrar usuario:', error);
         throw error;
@@ -34,4 +32,4 @@ async function logearUsuario(dataSegura) {
 module.exports = {
     registrarUsuario,
     logearUsuario
-};
+}

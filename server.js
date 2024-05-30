@@ -95,6 +95,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.json());
 
+
 //Configuración de la plantilla pug
 app.set('view engine', 'pug'); //Motor de plantillas
 app.set('views', path.join(__dirname, 'views'));

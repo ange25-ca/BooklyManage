@@ -20,22 +20,7 @@ router.post('/', passport.authenticate('local', {
 
   res.cookie('token', token, { httpOnly: true, secure: false });
 
-  let favoritos = res.locals.favoritos;
-
-  if (favoritos) {
-    await duplicarfavoritosEnDB(req.user.id, favoritos, token);
-  }
-
-  res.redirect('/favoritos');
+  res.redirect('/');
 });
-
-
-async function duplicarfavoritosEnDB(usuarioId, favoritos, token) {
-  for (const Libro in favoritos) {
-    console.log('Libros: ' + favoritos[Libro].nombre);
-
-    await favoriteController.agregarLibros(usuarioId, favoritos[Libro].id, favoritos[Libro].cantidad, token);
-  }
-}
 
 module.exports = router;

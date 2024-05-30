@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const authMiddleware = require('../middleware/authMiddleware');
 
-
 // Importa las rutas específicas
 const home = require('./home');
 const login = require('./login');
