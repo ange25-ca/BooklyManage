@@ -11,9 +11,6 @@ const registrarUsuario = require('./registrar-usuario');
 const catalogoRouter = require('./catalogo');
 const buscarLibroRouter = require('./buscar-libro');
 const libroRouter = require('./libro');
-const favoritosRouter = require('./favoritos');
-const agregarAFavoritos = require('./agregar-favorite');
-const eliminarfavoritosRouter = require('./eliminar-favoritos');
 
 //Configura las rutas
 router.use('/', home);
@@ -24,8 +21,5 @@ router.use('/registrar-usuario', registrarUsuario);
 router.use('/catalogo', catalogoRouter);
 router.use('/buscar-libro', buscarLibroRouter);
 router.use('/libro', libroRouter);
-router.use('/favoritos', authMiddleware.authenticate, favoritosRouter);
-router.use('/agregar-favoritos', agregarAFavoritos);
-router.use('/eliminar-favoritos', eliminarfavoritosRouter);
 
 module.exports = router;

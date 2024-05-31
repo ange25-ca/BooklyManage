@@ -10,10 +10,6 @@ const usuarioController = require('./controllers/usuarioController');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const authMiddleWare = require('./middleware/authMiddleware');
-const favoriteController = require('./controllers/favoriteController');
-
-//Variable para el almacenamiento de los favoritos
-let favoriteCache = {};
 
 //Se configura cookie Parser
 app.use(cookieParser());
@@ -60,35 +56,6 @@ passport.serializeUser((user, done) => {
     done(null, user);
 });
   
-// Middleware para obtener los favoritos del usuario desde la caché
-app.use(async (req, res, next) => {
-    if (req.user && req.user.id) {
-      // Verificar si el favoritos está en la caché
-      if (favoriteCache[req.user.id]) {
-        // Utilizar el carrito de la caché
-        res.locals.favorite = favoriteCache[req.user.id];
-      } else {
-        // Obtener el carrito de la base de datos
-        let favoriteDB = await favoriteController.obtenerLibros(req.user.id, req.cookies.token);
-        // Almacenar el carrito en la caché
-        favoriteCache[req.user.id] = favoriteDB;
-        // Utilizar el carrito de la base de datos
-        res.locals.favorite = favoriteDB;
-      }
-    } else {
-      // Si el usuario no está autenticado, utilizar el carrito de la sesión
-      res.locals.favorite = req.session.favorite || [];
-    }
-  
-    console.log(`Solicitud recibida: ${req.method} ${req.url}`);
-    next();
-});
-
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Algo salió mal');
-});
-  
 app.use(express.urlencoded({ extended: true }));
 
 //Procesa los archivos estáticos que están en la carpeta public
@@ -128,7 +95,6 @@ app.get('/logout', async (req, res) => {
         }
         console.log('req.sessionStore.clear finalizado correctamente');
       });
-      favoriteCache = {};
       res.clearCookie('token');
       res.redirect('/'); // Redirigir a la página principal u otra página de tu elección
     });

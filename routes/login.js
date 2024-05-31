@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const authMiddleware = require('../middleware/authMiddleware'); // Middleware para proteger rutas
-const favoriteController = require('../controllers/favoriteController');
 
 // Ruta para mostrar el formulario de login
 router.get('/', (req, res) => {

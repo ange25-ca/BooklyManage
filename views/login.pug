@@ -10,10 +10,10 @@ html(lang="en")
     .login-container
       .login-info-container
         h1.title Inicia sesión
-        form.inputs-container(action='login' method='post')
-          input.input(type="text" placeholder="Username")
-          input.input(type="text" placeholder="Password")
-          button.btn login
+        form.inputs-container(action='login' method='POST')
+          input.input(type="text", name="username", id='username', placeholder="Username", required)
+          input.input(type="text", name="password", id='password', placeholder="Password", required)
+          button.btn(type="submit") Iniciar sesión
           p No tienes una cuenta? 
               a(href='/register', class='span') Registrate
       img.image-container(src="images/login.svg" alt="")
