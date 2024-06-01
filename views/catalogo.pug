@@ -1,15 +1,45 @@
-extends layout
-
-block content
-  .general-container
-    if Libro.length > 0
-      .producto-container
-        each Libro in libro
-          .producto
-            img(src=`${Libro.imagen}`, alt=Libro.titulo)
-            p(class='producto-label') #{Libro.titulo.toUpperCase()} 
-            form(action=`/agregar-favorite/${Libro.id}`, method='POST')
-              button(type='submit') Agregar al favoritos
-                  i.fas.fa-search
-    else
-      p No se encontraron resultados.
+//extends layout
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css", rel="stylesheet")
+    link(rel="stylesheet", href="/css/catalogo.css")
+    title BooklyMange
+  body 
+    block content
+      header.header 
+        div.menu.container
+          a(href="#" class="logo") 
+            i(class="ri-book-read-line") BooklyManage
+          input(type="checkbox", id="menu")
+          label(for="menu")
+            i.menu-icon(class="ri-menu-line")
+          nav.navbar
+            ul.ulnavbar 
+              li 
+                a(href="/")
+                  //Botón de home 
+                  i(class="ri-home-2-line") 
+              li  
+                a(href="#")
+                  //Boton de favoritos
+                  i(class="ri-heart-3-line")
+              li 
+                a(href="#", id="openModal")
+                  //Boton de agregar
+                  i(class="ri-arrow-up-circle-line")
+      .general-container
+        if libros.length > 0
+          .producto-container
+            each libro in libros
+              .producto
+                img(src=`${libro.imagen}`, alt=libro.titulo)
+                p(class='producto-label') #{libro.titulo.toUpperCase()} 
+                p(class='producto-label') #{libro.autor.toUpperCase()} 
+                form(action=`/agregar-favorite/${libro.id}`, method='POST')
+                  button(type='submit') Agregar a favoritos
+                    i.fas.fa-search
+        else
+          p No se encontraron resultados.

@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+:root {
+  --login-bg: #e1e1e1;
+  --title-bg: #504f57;
+  --button-bg: #010101;
+  --border-bg: #000000;
+  --light-pink: #2f2c2f9c;
+  --image-bg: #67666887;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--border-bg);
+}
+
+body {
+  margin: 2rem 2rem;
+  height: 50vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(18, 18, 18, 0.15);
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-left: 5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+  text-decoration: none;
+}
+
+.ulnavbar {
+  margin-right: 1rem;
+}
+
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 20px;
+  display: block;
+  font-weight: 900;
+  margin-right: 2rem;
+  color: var(--border-bg);
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.general-container {
+  margin: 3rem 3rem;
+  height: 80px;
+  margin-top: -15rem;
+  text-align: center;
+}
+
+.general-container {
+  margin: 5%;
+  min-width: 250px;
+}
+.general-container input[type=text] {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #232325;
+  border-radius: 20px;
+}
+.general-container input:hover, .general-container input:focus, .general-container input:active, .general-container input:focus-visible {
+  border: 1px solid #f6f6f6;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #f6f6f6;
+}
+.general-container button {
+  padding: 8px 15px;
+  margin-left: 10px;
+  background-color: #232325;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.general-container button:hover {
+  background-color: #f6f6f6;
+}
+
+.producto-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 25px;
+}
+
+.producto {
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.producto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.producto p {
+  text-align: center;
+  color: #000;
+}
+.producto h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: rgba(58, 58, 58, 0.8235294118);
+}
+.producto button {
+  padding: 8px 15px;
+  background-color: #232325;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+.producto button:hover {
+  background-color: #f6f6f6;
+}
+
+.producto-label {
+  font-size: 18px;
+  font-family: "Reddit Mono";
+}
+
+.producto-precio {
+  font-size: 14px;
+  font-family: "Reddit Mono";
+}
+
+.producto-cell {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: auto 0.15em;
+}
+.producto-cell img {
+  max-width: 50px;
+}
+.producto-cell span {
+  margin-left: 2em;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s;
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=catalogo.css.map */

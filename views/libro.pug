@@ -1,9 +1,8 @@
-extends layout
 
 block content
   h1 #{title}
-  h2 #{Libro.name}
-  img(src=`/images/${Libro.image}`, alt=Libro.name)
-  p Descripción: #{Libro.description}
-  form(action=`/agregar-favorite/${Libro.id}`, method='POST')
+  h2 #{libro.titulo}
+  img(src=`/images/${libro.image}`, alt=libro.titulo)
+  p Descripción: #{libro.description}
+  form(action=`/agregar-favorite/${libro.id}`, method='POST')
     button(type='submit') Agregar al carrito

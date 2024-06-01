@@ -1,10 +1,10 @@
-// routes/registro.js
+// routes/index.js
 const express = require('express');
 const router = express.Router();
 
-// Ruta para mostrar el formulario de registro
+// Rutas públicas
 router.get('/', (req, res) => {
-    res.render('search');
+  res.render('search', { title: req.user != null ? `Bienvenido ${req.user.nombre}` : 'BooklyManage', user: req.user != null ? `${req.user.nombre}` : ''});
 });
 
 module.exports = router;

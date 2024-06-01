@@ -19,20 +19,20 @@ class Libro {
 
 async function obtenerTodos() {
   try {
-    const response = await axios.get(`${process.env.BASE_URL}/libro`);
-    const libro = response.data;
-    return libro.map(libro => new Libro(libro.id,
+    const response = await axios.get(`${process.env.BASE_URL}/libros`);
+    const libros = response.data;
+    return libros.map(libro => new Libro(libro.id,
       libro.titulo, libro.autor, libro.ISBN, libro.genero,
       libro.fecha_publi, libro.descripcion, libro.imagen));
   } catch (error) {
-    console.error('Error al obtener todos los productos:', error);
+    console.error('Error al obtener todos libros:', error);
     throw error;
   }
 }
 
 async function obtenerPorId(id) {
   try {
-    const response = await axios.get(`${process.env.BASE_URL}/libro${id}`);
+    const response = await axios.get(`${process.env.BASE_URL}/libros/${id}`);
     const libro = response.data;
     return new Libro(
         libro.id, libro.titulo, libro.autor, libro.ISBN,

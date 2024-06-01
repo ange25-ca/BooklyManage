@@ -4,7 +4,7 @@
   --login-bg: #e1e1e1
   --title-bg: #504f57
   --button-bg: #010101
-  --border-bg: #000000ea
+  --border-bg: #000000
   --light-pink: #2f2c2f9c
   --image-bg: #67666887
     
@@ -13,6 +13,8 @@
     padding: 0
     box-sizing: border-box
     text-decoration: none
+    list-style: none
+    color: var(--border-bg)
 
 body
     margin: 2rem 2rem 
@@ -36,7 +38,6 @@ body
     border-bottom: 2px solid rgb(18 18 18 / 15%)
 
 .logo
-    color: #00000093
     font-size: 1.5rem
     margin-left: 5rem
     font-weight: 800
@@ -47,13 +48,16 @@ body
     float: left
     text-decoration: none
 
+.ulnavbar
+    margin-right: 1rem
+
 .menu .navbar ul li a
     font-size: 18px
     padding: 20px
     display: block 
     font-weight: 900
     margin-right: 2rem
-    text-decoration: none
+    color: var(--border-bg)
     
 #menu
     display: none
@@ -70,7 +74,6 @@ body
     height: 80px
     margin-top: -15rem
     text-align: center
-
 
 .search-bar
     border-color: #000000

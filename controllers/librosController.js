@@ -1,12 +1,12 @@
 // controllers/Libros.js
-const LibroModel = require('../models/libroModel');
+const libroModel = require('../models/libroModel');
 
 async function obtenerTodos() {
-  return await LibroModel.obtenerTodos();
+  return await libroModel.obtenerTodos();
 }
 
 async function obtenerPorId(id) {
-  return await LibroModel.obtenerPorId(id);
+  return await libroModel.obtenerPorId(id);
 }
 
 module.exports = {

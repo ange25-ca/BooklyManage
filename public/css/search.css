@@ -3,7 +3,7 @@
   --login-bg: #e1e1e1;
   --title-bg: #504f57;
   --button-bg: #010101;
-  --border-bg: #000000ea;
+  --border-bg: #000000;
   --light-pink: #2f2c2f9c;
   --image-bg: #67666887;
 }
@@ -13,6 +13,8 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
+  color: var(--border-bg);
 }
 
 body {
@@ -40,7 +42,6 @@ body {
 }
 
 .logo {
-  color: rgba(0, 0, 0, 0.5764705882);
   font-size: 1.5rem;
   margin-left: 5rem;
   font-weight: 800;
@@ -53,13 +54,17 @@ body {
   text-decoration: none;
 }
 
+.ulnavbar {
+  margin-right: 1rem;
+}
+
 .menu .navbar ul li a {
   font-size: 18px;
   padding: 20px;
   display: block;
   font-weight: 900;
   margin-right: 2rem;
-  text-decoration: none;
+  color: var(--border-bg);
 }
 
 #menu {

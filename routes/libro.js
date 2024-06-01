@@ -2,11 +2,13 @@ const express = require('express');
 const router = express.Router();
 const librosController = require('../controllers/librosController');
 
-// Ruta para el detalle de producto
+// Ruta para el detalle de los libros
+router.get('/', librosController.obtenerTodos);
+
 router.get('/:id', async (req, res) => {
-    const idLibro = req.params.id;
-    const Libro = await librosController.obtenerPorId(idLibro);
-    res.render('libro', { title: 'Detalle del Libro', Libro, user: req.user != null ? `${req.user.nombre}` : '' });
+    const idlibro = req.params.id;
+    const libro = await librosController.obtenerPorId(idlibro);
+    res.render('libro', { title: 'Detalle del Libro', libro, user: req.user != null ? `${req.user.nombre}` : '' });
 });
 
 module.exports = router;

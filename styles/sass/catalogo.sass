@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap')
+
+$uniquifier: 'Noto style'
+$weight: 400
+
+$navColor: #232325
+$titleColor: #3a3a3ad2
+$hoverColor: #f6f6f6
+
+$border-radius: 20px
+
+:root
+  --login-bg: #e1e1e1
+  --title-bg: #504f57
+  --button-bg: #010101
+  --border-bg: #000000
+  --light-pink: #2f2c2f9c
+  --image-bg: #67666887
+    
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    list-style: none
+    color: var(--border-bg)
+
+body
+    margin: 2rem 2rem 
+    height: 50vh
+    font-family: 'Poppins', sans-serif
+
+.menu
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-bottom: 2px solid rgb(18 18 18 / 15%)
+
+.logo
+    font-size: 1.5rem
+    margin-left: 5rem
+    font-weight: 800
+    text-transform: uppercase
+
+.menu .navbar ul li
+    position: relative
+    float: left
+    text-decoration: none
+
+.ulnavbar
+    margin-right: 1rem
+
+.menu .navbar ul li a
+    font-size: 18px
+    padding: 20px
+    display: block 
+    font-weight: 900
+    margin-right: 2rem
+    color: var(--border-bg)
+    
+#menu
+    display: none
+
+.menu-icono
+    width: 25px
+
+.menu label
+    cursor: pointer
+    display: none
+
+.general-container
+    margin: 3rem 3rem
+    height: 80px
+    margin-top: -15rem
+    text-align: center
+
+
+.general-container
+  margin: 5%
+  min-width: 250px
+
+  input[type="text"]
+    flex: 1
+    padding: 8px
+    font-size: 16px
+    border: 1px solid $navColor
+    border-radius: $border-radius
+  
+  input:hover, input:focus, input:active, input:focus-visible
+    border: 1px solid $hoverColor
+    outline-width: 1px
+    outline-style: solid
+    outline-color: $hoverColor
+
+  button
+    padding: 8px 15px
+    margin-left: 10px
+    background-color: $navColor
+    color: white
+    border: none
+    border-radius: $border-radius
+    cursor: pointer
+    transition: background-color 0.3s
+
+    &:hover
+      background-color: $hoverColor
+
+.producto-container
+  display: grid
+  grid-template-columns: repeat(4, minmax(100px, 1fr))
+  gap: 25px
+
+.producto
+  border-radius: $border-radius
+  padding: 20px
+  text-align: center
+
+  img
+    max-width: 100%
+    height: auto
+    margin-bottom: 10px
+    border-radius: $border-radius
+  
+  p
+    text-align: center
+    color: #000
+
+  h2
+    font-size: 1.5rem
+    margin-bottom: 5px
+    color: $titleColor
+
+  button
+    padding: 8px 15px
+    background-color: $navColor
+    color: white
+    border: none
+    border-radius: $border-radius
+    cursor: pointer
+    width: -moz-available
+    width: -webkit-fill-available
+
+    &:hover
+      background-color: $hoverColor
+
+.producto-label
+  font-size: 18px
+  font-family: 'Reddit Mono'
+
+.producto-precio
+  font-size: 14px
+  font-family: 'Reddit Mono'
+
+.producto-cell
+  display: flex
+  justify-content: start
+  align-items: center
+  margin: auto 0.15em
+  
+  img
+    max-width: 50px
+  
+  span
+    margin-left: 2em
+
+//Ventana emergente
+body
+  font-family: Arial, sans-serif
+
+/* Estilos para el modal
+
+.modal
+  display: none
+  position: fixed
+  z-index: 1
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgb(0, 0, 0)
+  background-color: rgba(0, 0, 0, 0.4)
+  padding-top: 60px
+
+.modal-content
+  background-color: #fefefe
+  margin: 5% auto
+  padding: 20px
+  border: 1px solid #888
+  width: 80%
+  max-width: 600px
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
+  animation: fadeIn 0.5s
+
+/* Estilo para el botón de cerrar
+
+.close
+  color: #aaa
+  float: right
+  font-size: 28px
+  font-weight: bold
+
+  &:hover, &:focus
+    color: black
+    text-decoration: none
+    cursor: pointer
+
+/* Animación de desvanecimiento
+@keyframes fadeIn
+  from
+    opacity: 0
+
+  to
+    opacity: 1
