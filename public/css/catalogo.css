@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 :root {
   --login-bg: #e1e1e1;
@@ -156,76 +155,117 @@ body {
   font-size: 18px;
   font-family: "Reddit Mono";
 }
-
-.producto-precio {
-  font-size: 14px;
-  font-family: "Reddit Mono";
-}
-
-.producto-cell {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin: auto 0.15em;
-}
-.producto-cell img {
+.producto-label img {
   max-width: 50px;
 }
-.producto-cell span {
+.producto-label span {
   margin-left: 2em;
 }
 
-body {
-  font-family: Arial, sans-serif;
+.modal {
+  display: none;
 }
 
 /* Estilos para el modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
+.container-modal {
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(43, 41, 41, 0.5490196078);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
+#btn-modal:checked ~ .container-modal {
+  display: flex;
+}
+
+.content-modal {
+  width: 100%;
+  max-width: 400px;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.5s;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
-/* Estilo para el botón de cerrar */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+.content-modal h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.input-mas {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.input-mas:focus {
+  border-color: rgba(109, 109, 110, 0.8901960784);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-agregar {
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 1rem;
+}
+.btn-agregar:hover {
+  border: 1px solid #000;
+  color: black;
+  background-color: #ffffff;
+}
+
+.btn-cerrar {
+  margin-top: 10px;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: right;
+  font-size: 1rem;
   font-weight: bold;
 }
-.close:hover, .close:focus {
-  color: black;
+.btn-cerrar:hover, .btn-cerrar:focus {
+  color: #232524;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Animación de desvanecimiento */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.boton-modal {
+  display: flex;
+  align-items: center;
+}
+.boton-modal label {
+  cursor: pointer;
+  /* Asegura que el cursor cambie al pasar por encima del label */
+  display: flex;
+  align-items: center;
+}
+.boton-modal input[type=checkbox] {
+  display: none;
+  /* Oculta el checkbox */
+}
+.boton-modal i {
+  margin-left: 8px;
+  /* Espaciado opcional entre el checkbox y el icono */
 }
 
 /*# sourceMappingURL=catalogo.css.map */
