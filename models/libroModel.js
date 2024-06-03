@@ -190,8 +190,26 @@ async function agregarLibro(titulo, autor, ISBN, genero, fecha_publi, descripcio
   }
 }
 
+
+//Función para eliminar un liibro
+async function eliminarLibro(usuarioId, LibroId, token) {
+  const axiosConfig = {
+    headers: {
+        'Authorization': `Bearer ${token}`
+    }
+  };
+  try {
+      const response = await axios.delete(`${process.env.BASE_URL}/libros/${usuarioId}/${LibroId}`, axiosConfig);
+      return response.data;
+  } catch (error) {
+      console.error('Error al eliminar el producto del carrito:', error);
+      throw error;
+  }
+}
+
 module.exports = {
   obtenerTodos,
   obtenerPorId,
-  agregarLibro
+  agregarLibro,
+  eliminarLibro
 };

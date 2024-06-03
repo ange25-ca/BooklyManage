@@ -51,11 +51,13 @@ html(lang="en")
           .producto-container
             each libro in libros
               .producto
-                img(src=`${libro.imagen}`, alt=libro.titulo)
+                img(src=`/uploads/${libro.imagen}`, alt=libro.titulo)
                 p(class='producto-label') #{libro.titulo.toUpperCase()} 
                 p(class='producto-label') #{libro.autor.toUpperCase()} 
                 form(action=`/agregar-favorito/${libro.id}`, method='POST')
                   button(type='submit') Agregar a favoritos
                     i.fas.fa-search
+                form(action=`/eliminar-libro/${libro.id}`, method='POST')
+                  button(id='eliminar-libro' type='submit') Eliminar
         else
           p No se encontraron resultados.

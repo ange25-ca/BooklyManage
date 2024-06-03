@@ -31,9 +31,15 @@ async function agregarLibro(req, res) {
   }
 }
 
+async function eliminarLibro(usuarioId, LibroId, token){
+  return await libroModel.eliminarLibro(usuarioId, LibroId, token)
+}
+
+
 module.exports = {
   obtenerTodos,
   obtenerPorId,
-  agregarLibro
+  agregarLibro,
+  eliminarLibro,
 };
 
