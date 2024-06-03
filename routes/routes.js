@@ -10,7 +10,7 @@ const search = require('./search');
 const registrarUsuario = require('./registrar-usuario');
 const catalogoRouter = require('./catalogo');
 const buscarLibroRouter = require('./buscar-libro');
-const agregarLibroRouter = require('./agregar-libro');
+const agregarLibroRouter = require('./agregar-libro.js');
 const libroRouter = require('./libro');
 
 //Configura las rutas
