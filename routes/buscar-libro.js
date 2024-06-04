@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const librosController = require('../controllers/librosController');
+const authMiddleware = require('../middleware/authMiddleware'); 
 
 // Ruta para buscar los libros en la base de datos
-router.get('/', async (req, res) => {
+router.get('/',authMiddleware.authenticate, async (req, res) => {
     try {
         const query = req.query.q ? req.query.q.toLowerCase() : '';
         const libros = await librosController.obtenerTodos();

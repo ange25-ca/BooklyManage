@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const librosController = require('../controllers/librosController');
+const authMiddleware = require('../middleware/authMiddleware'); 
 
 // Ruta para el catálogo de libros
-router.get('/', async (req, res) => {
+router.get('/',authMiddleware.authenticate, async (req, res) => {
     try {
         const libros = await librosController.obtenerTodos();
         //console.log(libros); // Verifica los datos obtenidos

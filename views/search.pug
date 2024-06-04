@@ -4,6 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css", rel="stylesheet")
+    
     link(rel="stylesheet", href="/css/search.css")
     title BooklyMange
   body 
@@ -24,10 +25,10 @@ html(lang="en")
                 a(href="#")
                   i(class="ri-heart-3-line")
               li 
-                a(href="#") Contactos
+                a(href="/catalogo") My library
       div.general-container
         div.information-search
-          h1 Bienvenidos al mundo BookliManage
+          h1 #{title}
         form(action='/buscar-libro', method='GET' class='search-bar')
           input(type='text', name='q',class='inputSearch' placeholder='Buscar libro...')
           button(type='submit', class='buttonSearch')

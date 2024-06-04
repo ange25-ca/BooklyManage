@@ -268,4 +268,61 @@ body {
   /* Espaciado opcional entre el checkbox y el icono */
 }
 
+@media (max-width: 991px) {
+  .menu {
+    padding: 30px;
+  }
+  .menu label {
+    display: initial;
+  }
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(8, 8, 8, 0.5568627451);
+    margin: 0 10px;
+    display: none;
+  }
+  .menu .navbar ul li {
+    width: 100%;
+  }
+  .menu .navbar ul li a {
+    color: white;
+  }
+  .logo {
+    display: none;
+  }
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+  .header {
+    min-width: 0vh;
+    padding: 100px 30px;
+  }
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-txt {
+    padding: 0;
+  }
+  .header-img img {
+    display: none;
+  }
+  .menu-container {
+    padding: 30px;
+  }
+  .menu label {
+    display: initial;
+  }
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=catalogo.css.map */
